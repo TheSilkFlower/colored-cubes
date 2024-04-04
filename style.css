@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    height: 100%;
+    background-image: url('images/gray.jpeg');
+    background-size: cover;
+    background-position: center center;
+    transition: 1s;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+.time {
+    position: absolute;
+    bottom: 1vh;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    top: 12px;
+    position: absolute;
+    z-index: 10;
+}
+.buttons-btn {
+    cursor: crosshair;
+    width: 180px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: .3s;
+    font-size: 16px;
+}
+.time {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    animation: blick 5s ease-out infinite;
+    transition: .3s;
+}
+.time:hover {
+    transform: scale(2);
+    transition: .3s;
+}
+@keyframes blick {
+    50% {
+        color: rgba(255,255, 255, 1);
+        text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px rgb(255, 255, 255), 0 0 8px #fff;
+    }
+}
+.btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover, .btn5:hover {
+    transition: .3s;
+}
+.btn1:hover {
+    color: crimson;
+    box-shadow: 0px 0px 15px crimson;
+}
+.btn2:hover {
+    color: magenta;
+    box-shadow: 0px 0px 15px magenta;
+}
+.btn3:hover {
+    color: blue;
+    box-shadow: 0px 0px 15px blue;
+}
+.btn4:hover {
+    color: Aqua;
+    box-shadow: 0px 0px 15px aqua;
+}
+.btn5:hover {
+    color: MediumSeaGreen;
+    box-shadow: 0px 0px 15px mediumseagreen;
+}
+.btn6:hover {
+    color: gold;
+    box-shadow: 0px 0px 15px gold;
+}
+.btn7:hover {
+    color: DimGray;
+    box-shadow: 0px 0px 15px dimgray;
+}
+.elem {
+    background-color: rgb(30, 30, 30);
+    width: 30px;
+    height: 30px;
+}
+@keyframes approach {
+    0% {
+        background-size: 100%;
+    }
+    25% {
+        background-size: 120%;
+    }
+    50% {
+        background-size: 140%;
+    }
+    75% {
+        background-size: 120%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+@keyframes scroll {
+    100% {
+        background-position: 0px -400%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .buttons-btn {
+        width: 170px;
+    }
+}

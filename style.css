@@ -11,6 +11,7 @@ body {
 }
 .container {
     height: 100%;
+    background-color: black;
     background-image: url('images/gray.jpeg');
     background-size: cover;
     background-position: center center;
@@ -124,6 +125,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+    .container {
+        transition: none;
+    }
     .buttons-btn {
         width: 170px;
     }
